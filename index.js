@@ -6,7 +6,7 @@ require("dotenv").config();
 
 app.use(express.json());
 
-const PORT = 3000;
+
 
 
 // Route to search for a book by topic
@@ -69,7 +69,7 @@ app.get("/functions/books", (req, res) => {
     },
   });
 });
-
+const PORT = process.env.PORT || 3000;
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
