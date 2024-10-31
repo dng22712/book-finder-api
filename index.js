@@ -28,7 +28,7 @@ app.post("/functions/findbooks", async (req, res) => {
                 : 'No description available.'
         })).slice(0, 3);
 
-        res.json({ books });
+        res.json({ output : books });
     } catch (error) {
         console.error("Error fetching data from Google Books API:", error);
         if (error.response) {
